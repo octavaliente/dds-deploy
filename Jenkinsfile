@@ -1,19 +1,24 @@
 pipeline {
     agent any
     stages {
-        stage('build') {
+        stage('Config') {
             steps {
-                echo "Etapa de Build"
+                echo "Etapa de Configuracion"
             }
         }
-        stage('scan') {
+        stage('Scan') {
             steps {
-                echo "Etapa de scan"
+                echo "Etapa de SonarQube"
             }
         }
-        stage('deploy') {
+        stage('Test') {
             steps {
-                echo "Etapa de deploy"
+                echo "Etapa de Test"
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo "Etapa de Deploy a Minikube"
             }
         }
     }
