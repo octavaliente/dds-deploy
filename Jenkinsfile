@@ -5,13 +5,16 @@ pipeline {
             steps {
                 echo "Etapa de Build"
             }
+        }
         stage('scan') {
             steps {
-                echo "Etapa Scan"
+                echo "Etapa de scan"
             }
+        }
         stage('deploy') {
             steps {
-                echo "Etapa Deploy"
+                echo "Etapa de deploy"
             }
+        }
     }
 }
