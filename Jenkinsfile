@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "Desde Git"
-                sh "apt-get install docker"
+                sh "sudo apt-get install docker"
                 sh "docker ps"
             }
         }
