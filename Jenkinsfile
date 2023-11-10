@@ -3,10 +3,15 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo "Desde Git"
-                sh "sudo apt-get install docker"
-                sh "docker ps"
+                echo "Etapa de Build"
             }
+         stage('scan') {
+            steps {
+                echo "Etapa Scan"
+        }
+         stage('deploy') {
+            steps {
+                echo "Etapa Deploy"
         }
     }
 }
